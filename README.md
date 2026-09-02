@@ -43,7 +43,9 @@ running into its pink, without a second copy of either hex.
 `0-castle.webp` is the default. **They are 1672x941**, which is below the
 3840x2160 the first-party themes ship — fine at 1080p, soft on a 1440p or 4K
 display. Your own wallpapers go in `~/.config/omarchy/backgrounds/dracula/`,
-which is picked up without touching this repository.
+which is picked up without touching this repository. `docs/backgrounds.md` is
+the spec for generating replacements — resolution, palette, composition and a
+prompt to start from.
 
 Not included: `preview.png`. The theme switcher's previews are desktop
 screenshots, which have to be taken on a running machine.
