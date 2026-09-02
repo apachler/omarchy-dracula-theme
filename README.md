@@ -33,10 +33,20 @@ to live inside it rather than around it.
 
 `icons.theme` names the GTK icon set (`Yaru-purple`, for Dracula's accent).
 
-Not included, and easy to add locally: `backgrounds/` and `preview.png`. Both
-are artwork rather than palette. Drop images into
-`~/.config/omarchy/backgrounds/dracula/` and they are picked up without
-touching this repository; the theme works without either.
+`hyprland_active_border` and `hyprland_inactive_border` set the window borders.
+They are read through the gradient helpers in
+`default/themed/hyprland.lua.tpl` and `shell.toml.tpl`, which resolve bare
+colour names out of this file — so `blue magenta 45deg` is Dracula's purple
+running into its pink, without a second copy of either hex.
+
+`backgrounds/` carries three wallpapers; the theme switcher cycles them and
+`0-castle.webp` is the default. **They are 1672x941**, which is below the
+3840x2160 the first-party themes ship — fine at 1080p, soft on a 1440p or 4K
+display. Your own wallpapers go in `~/.config/omarchy/backgrounds/dracula/`,
+which is picked up without touching this repository.
+
+Not included: `preview.png`. The theme switcher's previews are desktop
+screenshots, which have to be taken on a running machine.
 
 ## Editing it
 
@@ -49,6 +59,12 @@ become ANSI 5. Dracula puts pink at 5 and purple at 4 — which is what `magenta
 and `blue` say instead. Reading the palette back, `{{ purple }}` correctly
 resolves to pink, because that is Omarchy's convention rather than Dracula's
 naming.
+
+**`lighter_background` is not `selection`.** Dracula names one colour "Current
+Line / Selection" and it is tempting to use `#44475a` for both. Don't: panels
+are painted with `lighter_background`, so a selected row on a panel would then
+be the same colour as the panel and disappear. `#363848` is the midpoint of
+`background` and `selection`, which keeps the two distinguishable.
 
 **ANSI 0 is `#282a36`, not the spec's `#21222c`.** `omarchy-theme-color`
 assigns `color0` from `background` unconditionally, so the distinction Dracula
