@@ -1,0 +1,46 @@
+# Dracula for Omarchy — https://draculatheme.com
+#
+# The published Dracula specification, expressed in Omarchy's semantic schema.
+# Everything else a theme could ship is generated from this file by
+# omarchy-theme-set-templates, so this is the whole theme.
+#
+# Two things here are not free choices:
+#
+#   There is no `purple` key. omarchy-theme-color aliases `magenta` from
+#   `purple`, so a purple entry would land on ANSI 5. Dracula puts pink at 5
+#   and purple at 4, which is what `magenta` and `blue` below say.
+#
+#   `dark_background` carries Dracula's #21222c rather than ANSI 0 doing it.
+#   omarchy-theme-color assigns color0 from `background` unconditionally, so
+#   the spec's distinction between the two cannot survive the generator.
+
+mode = "dark"
+
+accent    = "#bd93f9"   # purple
+selection = "#44475a"   # current line
+muted     = "#6272a4"   # comment — also ANSI 8
+
+background         = "#282a36"
+dark_background    = "#21222c"   # the spec's ANSI black, used as chrome
+darker_background  = "#191a21"
+lighter_background = "#44475a"
+
+foreground        = "#f8f8f2"
+dark_foreground   = "#6272a4"
+light_foreground  = "#f8f8f2"
+bright_foreground = "#ffffff"
+
+red     = "#ff5555"
+yellow  = "#f1fa8c"
+orange  = "#ffb86c"
+green   = "#50fa7b"
+cyan    = "#8be9fd"
+blue    = "#bd93f9"   # Dracula maps blue to purple
+magenta = "#ff79c6"   # pink
+
+bright_red     = "#ff6e6e"
+bright_yellow  = "#ffffa5"
+bright_green   = "#69ff94"
+bright_cyan    = "#a4ffff"
+bright_blue    = "#d6acff"
+bright_magenta = "#ff92df"
