@@ -39,7 +39,7 @@ They are read through the gradient helpers in
 colour names out of this file — so `blue magenta 45deg` is Dracula's purple
 running into its pink, without a second copy of either hex.
 
-`backgrounds/` carries three wallpapers; the theme switcher cycles them and
+`backgrounds/` carries four wallpapers; the theme switcher cycles them and
 `0-castle.webp` is the default. **They are 1672x941**, which is below the
 3840x2160 the first-party themes ship — fine at 1080p, soft on a 1440p or 4K
 display. Your own wallpapers go in `~/.config/omarchy/backgrounds/dracula/`,

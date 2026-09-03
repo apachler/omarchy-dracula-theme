@@ -62,6 +62,7 @@ rather than the subject.
 backgrounds/0-castle.webp
 backgrounds/1-portal.webp
 backgrounds/2-sigil.webp
+backgrounds/3-keep.webp
 ```
 
 `omarchy-theme-set` sorts the directory and takes the first entry as the
